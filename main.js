@@ -8,6 +8,7 @@ const list = document.querySelector('.js-list'); //lista
 //ARRAY VACIO DATOS USUARIO
 let listUser = []; //lista de los 10 usuarios aleatorios
 
+const userLS = JSON.parse(localStorage.getItem('saveUser'));
 
 //PEDIR INFO A LA API
 function getApiInfo () {
@@ -27,7 +28,7 @@ getApiInfo();
 //PINTA ESTRUCTURA USUARIOS
 function renderUser(user){
     let html="";
-    html+=`<li id="${user.id.value}" class="list-user js-list-user">
+    html+=`<li id="${user.id.value}" class="list-user js-list-user noFriend">
         <h3 class="">${user.name.first}</h3>
         <img class="img" src="${user.picture.large}"/>
         <p>${user.location.city}</p>
@@ -50,13 +51,11 @@ addEventToUser();
 function handleClickFriends(event){
     const idUserCliked = parseInt (event.currentTarget.id);
     console.log (event.currentTarget.id);
-    const foundUser = listUser.find(item => item.id.value === idUserCliked);
     const indexUser = listUser.findIndex(item => item.id.value === idUserCliked);
     if (indexUser === -1){
         event.currentTarget.classList.add ("friends"); 
-        event.currentTarget.isFriends = true;
+        event.currentTarget.classList.remove ("noFriend");
     }
-    console.log(event.currentTarget.isFriends)
     console.log(listUser);
     }
     
@@ -69,4 +68,17 @@ function addEventToUser(){
     }
     }
     
+function handleClickSave (event){
+    event.preventDefault();
+    localStorage.setItem('saveUser', JSON.stringify(listUser));
+}
 
+function handleClickData(event){
+    event.preventDefault();
+    listUser = userLS;
+    renderList (listUser);
+}
+
+
+btnSave.addEventListener('click', handleClickSave);
+btnData.addEventListener('click', handleClickData);
