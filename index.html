@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Twitterlab</h1>
     </header>
     <main>
-        <form action="">
-            <button class="js-savedata">Guardar datos</button>
-            <button class="js-recoverdata">Recuperar datos</button>
+        <form class="btn">
+            <button class="savedata js-savedata">Guardar datos</button>
+            <button class="recoverdata js-recoverdata">Recuperar datos</button>
         </form>
         <section>
             <ul class="ul js-list"></ul>
@@ -23,10 +24,3 @@
 </body>
 </html>
 
-
-<!--
-    1 Cada vez que se arranca la página hay que obtener 10 usuarios al azar llamando a esta API:
-    https://randomuser.me/api/?results=10
-    2 Limpiar los datos que nos vienen de la API y quedarnos solo con la información que nos interese.
-    3 Guardar los datos de los usuarios en un array.
-    4 Pintar el listado de usuarios con nombre, ciudad, foto y nombre de usuario en pantalla-->
