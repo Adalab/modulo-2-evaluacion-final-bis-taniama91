@@ -22,9 +22,9 @@ Cuando hagamos click en uno de los usuarios hay que:
 - Añadir 2 botones, **Guardar datos** y **Recuperar datos**.
 - Al hacer click sobre guardar datos hay que guardar en el local storage el listado de usuarios que se esté mostrando en ese momento.
 - Al hacer click en recuperar datos hay que hacer varias cosas:ff
-    1- Leer los datos que hay en el local storage.
-    2- Sobre escribir el array de datos
-    3- Pintar los datos de los usuarios en pantalla. 
+    * Leer los datos que hay en el local storage.
+    * Sobre escribir el array de datos
+    * Pintar los datos de los usuarios en pantalla. 
 
 
 ## Entrega
