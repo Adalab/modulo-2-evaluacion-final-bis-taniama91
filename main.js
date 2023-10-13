@@ -38,7 +38,6 @@ function renderUser(user){
     
      return html;
 
-    
 }
 // BUCLE DE LOS 10 USUARIOS
 function renderList(listUser){

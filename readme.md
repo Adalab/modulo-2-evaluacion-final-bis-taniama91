@@ -3,7 +3,8 @@ Esta evaluación consiste en crear una aplicación de red social donde podamos m
 
 ## Instalación
 
-Abre mi proyecto con Open with Live Server
+Abre mi proyecto con Open with Live Server o visita esta dirección web. [Pincha aquí] (https://beta.adalab.es/modulo-2-evaluacion-final-bis-taniama91/)
+
 
 ## Objetivos:
 
@@ -21,8 +22,8 @@ Cuando hagamos click en uno de los usuarios hay que:
 - Añadir 2 botones, **Guardar datos** y **Recuperar datos**.
 - Al hacer click sobre guardar datos hay que guardar en el local storage el listado de usuarios que se esté mostrando en ese momento.
 - Al hacer click en recuperar datos hay que hacer varias cosas:ff
- * Leer los datos que hay en el local storage.
- * Sobre escribir el array de datos3- Pintar los datos de los usuarios en pantalla. 
+     * Leer los datos que hay en el local storage.
+     * Sobre escribir el array de datos3- Pintar los datos de los usuarios en pantalla. 
 
 
 ## Entrega
