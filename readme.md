@@ -3,7 +3,7 @@ Esta evaluación consiste en crear una aplicación de red social donde podamos m
 
 ## Instalación
 
-Abre mi proyecto con Open with Live Server o visita esta dirección web. [Pincha aquí] (https://beta.adalab.es/modulo-2-evaluacion-final-bis-taniama91/)
+Abre mi proyecto con Open with Live Server o visita esta dirección web. https://beta.adalab.es/modulo-2-evaluacion-final-bis-taniama91/
 
 
 ## Objetivos:
