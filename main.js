@@ -28,13 +28,23 @@ getApiInfo();
 //PINTA ESTRUCTURA 1 USUARIO
 function renderUser(user){
     let html="";
-    html+=`<li id=" ${user.id.value}" class="list-user js-list-user noFriend">
+    if(user.isFriend){
+        html+=`<li id="${user.id.value}" class="list-user js-list-user friends">
         <img class="img" src=" ${user.picture.large}"/>
         <h3 class="name"> ${user.name.first}</h3>
         <p class="city"> ${user.location.city}</p>
         <p class="username"> ${user.login.username}</p>
         
     </li>`;
+    }else{
+        html+=`<li id="${user.id.value}" class="list-user js-list-user noFriend">
+        <img class="img" src=" ${user.picture.large}"/>
+        <h3 class="name"> ${user.name.first}</h3>
+        <p class="city"> ${user.location.city}</p>
+        <p class="username"> ${user.login.username}</p>
+        
+    </li>`;}
+    
     
      return html;
 
@@ -50,15 +60,18 @@ addEventToUser();
 }
 //FUNCION PARA DECIR SI ES MI AMIGO
 function handleClickFriends(event){
-    const idUserCliked = parseInt (event.currentTarget.id);
-    console.log (event.currentTarget.id);
-    const indexUser = listUser.findIndex(item => item.id.value === idUserCliked);
-    if (indexUser === -1){
+    const idUserCliked = event.currentTarget.id;
+    console.log (idUserCliked);
+    const indexUser = listUser.findIndex(item => 
+        {console.log(item.id.value, idUserCliked);
+        return item.id.value == idUserCliked})
+        
+        listUser[indexUser].isFriend = true;
         event.currentTarget.classList.add ("friends"); 
         event.currentTarget.classList.remove ("noFriend");
-    }
+    
     console.log(listUser);
-    }
+}
     
 
 function addEventToUser(){
